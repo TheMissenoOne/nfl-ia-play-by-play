@@ -1,6 +1,8 @@
 'use strict';
 const fs = require('fs');
 const brain = require("brainjs");
+var express = require('express');
+var app = express();
 
 var net = new brain.NeuralNetwork();
 
@@ -24,6 +26,18 @@ rawdata = fs.readFileSync('2015.json');
 trainBySeason(JSON.parse(rawdata));
 // rawdata = fs.readFileSync('2014.json');
 // trainBySeason(JSON.parse(rawdata));
+
+app.get('/out', function (req, res) {
+  content = JSON.parse(req.query.in);
+  var out = net.run(content);
+  console.log(JSON.stringify(out));
+  res.send(out);
+});
+
+app.listen(3000, function () {
+  console.log('Listening on port 3000!');
+});
+
 var out = net.run([2,1,12,5,1,-0.14,-0.163,0.215,0.20600000000000002]);
 console.log(JSON.stringify(out));
 
