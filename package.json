@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-demo",
+  "name": "nfl-ia-play-by-play",
   "private": false,
   "version": "0.0.1",
   "description": "Basic hello world application for Node.js",
@@ -13,7 +13,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --verbose",
-    "tdd": "jest --verbose --watch --onlyChanged"
+    "tdd": "jest --verbose --watch --onlyChanged",
+    "start": "app.js"
   },
   "modulePathIgnorePatterns": [
     "acorn",
