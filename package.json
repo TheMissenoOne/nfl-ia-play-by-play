@@ -14,7 +14,7 @@
   "scripts": {
     "test": "jest --verbose",
     "tdd": "jest --verbose --watch --onlyChanged",
-    "start": "app.js"
+    "start": "node app.js"
   },
   "modulePathIgnorePatterns": [
     "acorn",
