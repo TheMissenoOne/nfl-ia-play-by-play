@@ -12,9 +12,7 @@
   },
   "main": "app.js",
   "scripts": {
-    "test": "jest --verbose",
-    "tdd": "jest --verbose --watch --onlyChanged",
-    "start": "node app.js"
+     "start": "node app"
   },
   "modulePathIgnorePatterns": [
     "acorn",
