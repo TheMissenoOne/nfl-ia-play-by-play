@@ -2,6 +2,7 @@
 const fs = require('fs');
 const brain = require("brainjs");
 var express = require('express');
+var cors = require('cors')
 var app = express();
 
 var net = new brain.NeuralNetwork();
@@ -27,8 +28,9 @@ trainBySeason(JSON.parse(rawdata));
 // rawdata = fs.readFileSync('2014.json');
 // trainBySeason(JSON.parse(rawdata));
 
+app.use(cors());
 app.get('/out', function (req, res) {
-  content = JSON.parse(req.query.in);
+  var content = JSON.parse(req.query.in);
   var out = net.run(content);
   console.log(JSON.stringify(out));
   res.send(out);
@@ -42,7 +44,7 @@ var out = net.run([2,1,12,5,1,-0.14,-0.163,0.215,0.20600000000000002]);
 console.log(JSON.stringify(out));
 
 function trainBySeason(season) {
-  for (let i = 0; i < season.length ;i++) {
+  for (let i = 0; i < season.length;i++) {
       var element = season[i];
       if((element.PlayType == 'PASS' || element.PlayType == 'RUSH')&& element.IsNoPlay == 0 && element.OffenseTeam != "" && element.DefenseTeam!= ""){
           var playD= Object.values(element);
