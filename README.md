@@ -1,4 +1,4 @@
-# NFL IA Play-by-Play
+# NFL ML Model Play-by-Play
 
 This is a Node.js and Brain.js project that was developed as a final project for the Cloud & Cognitive Internship immersion program. The program focused on studying IBM Cloud & Cognitive, Open Source, and Agile technologies and methodologies, and later joined the IBM Data & AI team to build proof-of-concept assets for pre-sales using AngularJS (JavaScript) and Express (Node.js) integrating the Watson AI services.
 
