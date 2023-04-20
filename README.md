@@ -10,4 +10,4 @@ Brain.js
 Express
 JavaScript
 # Credits
-This project was developed by TheMissenoOne as a final project for the Cloud & Cognitive Internship immersion program.
+This project was developed by Vitor Misseno as a final project for the Cloud & Cognitive Internship immersion program.
